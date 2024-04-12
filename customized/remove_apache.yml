@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repo index
+    apt:
+      update_cache: yes
+
+  - name: intall apache2 package
+    apt:
+      name: apache2
+      state: absent

@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: intall apache package and php
+    package:
+      name: 
+        - apache2
+        - php
+      state: latest
+      update_cache: yes
+
